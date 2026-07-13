@@ -141,6 +141,7 @@ export default function ItemForm({ onCreate, isSubmitting }) {
           value={form.price}
           onChange={handleChange}
         />
+        //lets do nother change here
         {fieldErrors.price && (
           <span className="field-error">{fieldErrors.price}</span>
         )}
