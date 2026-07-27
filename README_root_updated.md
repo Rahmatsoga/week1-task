@@ -14,7 +14,7 @@ single week can be run and reviewed independently.
 |---|---|---|---|
 | 1 | End-to-End Setup & Core CRUD Integration | ✅ Complete | [`Week1_Task/`](./Week1_Task) |
 | 2 | Full-Stack Authentication & Protected Interfaces | ✅ Complete | [`Week2_Task/`](./Week2_Task) |
-| 3 | Server-Side Filtering, Pagination & Dynamic UI | ⏳ Not started | — |
+| 3 | Server-Side Filtering, Pagination & Dynamic UI | ✅ Complete | [`Week3_Task/`](./Week3_Task) |
 | 4 | Complex Data Handling: File Uploads & Relational Data | ⏳ Not started | — |
 
 ## Tech Stack
@@ -23,6 +23,7 @@ single week can be run and reviewed independently.
 - **Backend:** Node.js, Express
 - **Database:** MongoDB (Mongoose)
 - **Auth:** JWT stored in httpOnly cookies, bcrypt password hashing
+- **Data:** Server-side search, filtering, sorting, and pagination
 
 ## Repository Structure
 
@@ -36,6 +37,10 @@ week1-task/
 │   ├── client/
 │   ├── server/
 │   └── README.md         # Week 2 details: setup, API docs, demo checklist
+├── Week3_Task/          # Week 3: Search, filtering, sorting, pagination
+│   ├── client/
+│   ├── server/
+│   └── README.md         # Week 3 details: setup, API docs, demo checklist
 ```
 
 Each week's `README.md` contains full setup instructions, environment variables, API
