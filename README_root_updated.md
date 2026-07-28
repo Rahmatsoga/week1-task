@@ -60,9 +60,3 @@ cp .env.example .env
 npm install
 npm run dev               # starts the React app
 ```
-
-## Submission Notes
-
-A submission PDF accompanies each week's deliverable, covering what was implemented, how
-it was implemented, and demo evidence (screenshots/recording), in addition to the README
-in each week's folder.
