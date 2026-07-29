@@ -11,8 +11,9 @@ const SORT_OPTIONS = [
 ];
 
 export default function FilterBar({
-  search, onSearchChange, category, onCategoryChange, categories, sortBy, order, onSortChange,
+  search, onSearchChange, category, onCategoryChange, categories, sortBy, order, onSortChange, onClearFilters,
 }) {
+
   const [searchInput, setSearchInput] = useState(search);
   const debouncedSearch = useDebounce(searchInput, 400);
 
@@ -46,6 +47,9 @@ export default function FilterBar({
           <option key={opt.value} value={opt.value}>{opt.label}</option>
         ))}
       </select>
+      <button type="button" className="secondary" onClick={onClearFilters}>
+  Clear Filters
+</button>
     </div>
   );
 }

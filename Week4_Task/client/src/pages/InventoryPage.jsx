@@ -21,16 +21,26 @@ export default function InventoryPage() {
 
   const queryParams = useMemo(
     () => ({ search, category, sortBy, order, page, limit: 10 }),
-    [search, category, sortBy, order, page]
+    [search, category, sortBy, order, page],
   );
 
-  const { items, pagination, isLoading, error, isSubmitting, addItem, removeItem } =
-    useItems(queryParams);
+  const {
+    items,
+    pagination,
+    isLoading,
+    error,
+    isSubmitting,
+    addItem,
+    removeItem,
+  } = useItems(queryParams);
 
   const [categories, setCategories] = useState([]);
 
   useEffect(() => {
-    itemService.getCategories().then(setCategories).catch(() => setCategories([]));
+    itemService
+      .getCategories()
+      .then(setCategories)
+      .catch(() => setCategories([]));
   }, []);
 
   const updateParams = (updates, resetPage = true) => {
@@ -47,12 +57,14 @@ export default function InventoryPage() {
   };
 
   const handleSearchChange = (value) => updateParams({ search: value });
+  const handleClearFilters = () => setSearchParams({});
   const handleCategoryChange = (value) => updateParams({ category: value });
   const handleSortChange = (combined) => {
     const [nextSortBy, nextOrder] = combined.split("-");
     updateParams({ sortBy: nextSortBy, order: nextOrder });
   };
-  const handlePageChange = (nextPage) => updateParams({ page: nextPage }, false);
+  const handlePageChange = (nextPage) =>
+    updateParams({ page: nextPage }, false);
 
   const handleDelete = async (id) => {
     const confirmed = window.confirm("Delete this item?");
@@ -65,11 +77,18 @@ export default function InventoryPage() {
       <header className="inventory-header">
         <div>
           <h1>Inventory Management</h1>
-          <p>Upload a product image, link a supplier, and search/filter/sort/paginate.</p>
+          <p>
+            Upload a product image, link a supplier, and
+            search/filter/sort/paginate.
+          </p>
         </div>
         <div className="user-bar">
-          <span>Signed in as <b>{user?.name}</b></span>
-          <button onClick={logout} className="secondary">Log Out</button>
+          <span>
+            Signed in as <b>{user?.name}</b>
+          </span>
+          <button onClick={logout} className="secondary">
+            Log Out
+          </button>
         </div>
       </header>
 
@@ -89,6 +108,7 @@ export default function InventoryPage() {
           sortBy={sortBy}
           order={order}
           onSortChange={handleSortChange}
+          onClearFilters={handleClearFilters}
         />
 
         {error && <p className="banner-error">{error}</p>}

@@ -35,7 +35,16 @@ if (process.env.NODE_ENV !== "production") {
 app.use("/uploads", express.static(path.join(__dirname, "uploads")));
 
 app.get("/api/health", (req, res) => {
-  res.status(200).json({ success: true, data: { status: "ok" }, error: null });
+  res.status(200).json({
+    success: true,
+    data: {
+      status: "ok",
+      uptimeSeconds: Math.floor(process.uptime()),
+      environment: process.env.NODE_ENV || "development",
+      timestamp: new Date().toISOString(),
+    },
+    error: null,
+  });
 });
 
 app.use("/api/auth", authRoutes);
