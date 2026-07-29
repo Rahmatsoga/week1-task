@@ -1,0 +1,6 @@
+node_modules/
+.env
+# Uploaded images are user-generated content, not source code — keep
+# the folder (via .gitkeep) but never commit the actual uploaded files.
+uploads/*
+!uploads/.gitkeep
