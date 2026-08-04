@@ -10,19 +10,20 @@ single week can be run and reviewed independently.
 
 ## Progress
 
-| Week | Task | Status | Folder |
-|---|---|---|---|
-| 1 | End-to-End Setup & Core CRUD Integration | ✅ Complete | [`Week1_Task/`](./Week1_Task) |
-| 2 | Full-Stack Authentication & Protected Interfaces | ✅ Complete | [`Week2_Task/`](./Week2_Task) |
-| 3 | Server-Side Filtering, Pagination & Dynamic UI | ✅ Complete | [`Week3_Task/`](./Week3_Task) |
-| 4 | Complex Data Handling: File Uploads & Relational Data | ✅ Complete | [`Week4_Task/`](./Week4_Task) |
+| Week | Task                                                  | Status      | Folder                        |
+| ---- | ----------------------------------------------------- | ----------- | ----------------------------- |
+| 1    | End-to-End Setup & Core CRUD Integration              | ✅ Complete | [`Week1_Task/`](./Week1_Task) |
+| 2    | Full-Stack Authentication & Protected Interfaces      | ✅ Complete | [`Week2_Task/`](./Week2_Task) |
+| 3    | Server-Side Filtering, Pagination & Dynamic UI        | ✅ Complete | [`Week3_Task/`](./Week3_Task) |
+| 4    | Complex Data Handling: File Uploads & Relational Data | ✅ Complete | [`Week4_Task/`](./Week4_Task) |
 
 All four weeks of the Phase 1 evaluation have been completed, tested, and documented.
 
 ## What the Final Application Does
 
 By Week 4, the application is a fully authenticated inventory management system with:
-- Full CRUD for inventory items, backed by MongoDB
+
+- Full CRUD for inventory items, backed by MongoDB (I have used MongoDB Compass but we can use ATLAS as well)
 - Secure registration/login with JWT sessions stored in httpOnly cookies
 - Protected routes on both the frontend and the API
 - Server-side search, category filtering, sorting, and pagination, all reflected in the URL
